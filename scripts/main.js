@@ -1088,7 +1088,7 @@ function setTestLength(n) {
         header.children[i].className = "";
     };
     // Underline the correct number
-    header.children[[10, 25, 50, 100].indexOf(n) + 1].classList.add("activemode");
+    header.children[[10, 25, 50, 100].indexOf(n)].classList.add("activemode");
     // Remove all words
     while (wordField.firstChild) {
         wordField.removeChild(wordField.lastChild);

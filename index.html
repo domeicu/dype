@@ -4,19 +4,18 @@
         <title>dype | typing test</title>
         <link rel="stylesheet" href="stylesheets/styles.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        <div id="typingarea">
-            <div id="header" style="font-weight:bold; font-size:x-large;">
-                <span id="title" style="padding-left:10px; padding-right:60px;">dype /// </span>
+        <div style="color: rgba(255,255,255,0.5); mix-blend-mode: difference; text-align:center; margin-top: 2vh;">
+            <span>dype</span>
+        </div>
+        <div id="typingarea" class="no-select">
+            <div id="header" style="text-align: center; font-weight:bold; font-size:x-large;">
                 <a id="10words" class="activemode">10</a>
                 <a id="25words">25</a>
                 <a id="50words">50</a>
                 <a id="100words">100</a>
-                <div id="customisation" style="display:none;">
-                    <input id="accentpicker" type="color">
-                    <input id="darklight" type="button" value="☼ / ☾">
-                </div>
             </div>
             <div id="main">
                 <div id="text">
@@ -32,8 +31,8 @@
                     <span>word </span>
                 </div>
                 <div id="input" style="display:flex;">
-                    <input id="enter" tabindex="1" pattern=" " spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off" autofocus>
-                    <input id="restart" tabindex="2" type="button" value="↻">
+                    <input id="enter" class="enter" tabindex="1" pattern=" " spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off" autofocus>
+                    <button id="restart" tabindex="2" value="↻" style="font-weight:bolder;"><i class="fa fa-repeat"></i></button>
                 </div>
             </div>
             <div id="results" class="invisible" style="padding-top:0rem;">
@@ -49,7 +48,7 @@
         </div>
     </body>
     <footer>
-        <a id="social" tabindex="-1" href="https://www.instagram.com/dome.ic/">dome.ic</a>
+        <a id="social" tabindex="-1" href="https://dome.icu" target="_blank">dome.icu</a>
         <script src="scripts/main.js"></script>
     </footer>
 </html>

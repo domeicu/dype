@@ -1,5 +1,30 @@
+:root {
+    --bg-color: #FDFDFD;
+    --text-area-color: #F1F1F1;
+    --text-box-color: #FDFDFD;
+    --text-box-incorrect-color: #ffb9b3; 
+    --text-color: #010101;
+    --text-active-color: #010101;
+    --text-correct-color: #dddddd;
+    --text-incorrect-color: #ffb9b3;
+}
+
+* {
+    transition: 0.1s;
+}
+
+.no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 body {
-    transition: 1s linear;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     font-family:"Open Sans";
 }
 
@@ -13,64 +38,74 @@ body {
 }
 
 a {
-    padding-right:20px;
+    padding: 0 0.2em;
     font-weight:normal;
+    text-decoration: none;
+    border-bottom: 0.1em solid transparent;
 }
 
 a:hover, .activemode {
-    text-decoration:underline;
-    text-decoration-thickness:.2rem;
-    text-underline-offset:.3rem;
+    border-color: var(--text-color);
+    text-decoration-thickness:.1em;
+    text-underline-offset:.15em;
 }
 
 #main {
-    background-color:rgb(241, 241, 241);
+    background-color: var(--text-area-color);
     width:700px;
     padding:30px;
     margin-top:10px;
-    border-radius:0.3rem;
+    border-radius:1em;
 }
 
 #text {
     display:block;
-    padding-bottom:1rem;
+    padding-bottom:1em;
 }
 
 #text > span {
     font-size:x-large;
-    line-height:2rem;
+    line-height:1.5em;
+    padding-right: 0.1em;
 }
 
 #enter {
     width:100%;
-    padding:.75rem 1rem;
+    padding:.75em 1em;
     border:none;
-    border-radius:0.3rem;
+    border-radius:0.5em;
     font-size:larger;
 }
 
+.enter {
+    background-color: var(--text-box-color);
+}
+
 #restart {
+    background-color: var(--text-box-color);
     width:8%;
     margin-left:4px;
     border:none;
+    border-radius: 0.5em;
     font-size:larger;
     font-weight:900;
 }
 
 .active {
-    font-weight:bolder
+    font-weight:bolder;
+    color: var(--text-active-color);
 }
 
 .correct {
-    color:grey;
+    color: var(--text-correct-color);
 }
 
 .incorrect {
-    color:rgb(209, 255, 45);
+    color: var(--text-incorrect-color);
 }
 
 .currentlyIncorrect {
-    background-color:rgb(255, 137, 153);
+    background-color: var(--text-box-incorrect-color);
 }
 
 #customisation {
@@ -88,8 +123,8 @@ a:hover, .activemode {
     left:50%;
     -ms-transform: translate(-50%, 0%);
     transform: translate(-50%, 0%);
-    color:rgb(189, 189, 189);
-    text-underline-offset:.1rem;
+    color: rgba(255,255,255,0.5);
+    mix-blend-mode: difference;
 }
 
 .invisible {
