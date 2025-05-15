@@ -1088,7 +1088,7 @@ function setTestLength(n) {
         header.children[i].className = "";
     };
     // Underline the correct number
-    header.children[[10, 25, 50, 100].indexOf(n)].classList.add("activemode");
+    header.children[[10, 25, 50, 100].indexOf(n)+1].classList.add("activemode");
     // Remove all words
     while (wordField.firstChild) {
         wordField.removeChild(wordField.lastChild);
@@ -1153,3 +1153,8 @@ document.getElementById("restart").addEventListener("click", function() {
 window.onload = function() {
     setWordField();
 };
+
+// Settings window
+document.getElementById("settings").onclick = function() {
+    console.log("settings");
+}
