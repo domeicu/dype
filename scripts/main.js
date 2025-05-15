@@ -1173,7 +1173,6 @@ function checkWord() {
 function getResults() {
     chars = generatedWords.join(' ').length;
     correctKeys += testLength - 1
-    console.log(generatedWords.join(' '))
     time = (Date.now() - testStart) / 1000 / 60;
     // Update text elements
     document.getElementById("wpm").textContent = Math.round((correctKeys/5)/time)
@@ -1189,7 +1188,8 @@ function getResults() {
 function setTestLength(n) {
     if (n == "verse") {
         passage = verseBank[(Math.floor(Math.random() * verseBank.length/2))*2+1].split(' ');
-        testLength = passage.length;
+        passage.shift();
+        testLength = passage.length - 1;
         mode = "scripture";
     } else {
         passage = '';
