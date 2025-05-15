@@ -9,6 +9,8 @@ let testLength = 10
 let extraKeys = 0
 let testStart = 0
 let testStarted = false
+let mode = "scripture"
+let passage = ''
 
 let wordBank = `the
 of
@@ -1010,6 +1012,8 @@ teeth
 shell
 neck`.split('\n')
 
+let tempScripture = "Let us hold unswervingly to this hope we profess, for he who promised is faithful."
+
 let generatedWords = []
 
 function setWordField() {
@@ -1025,12 +1029,19 @@ function setWordField() {
     extraKeys = 0;
     testStarted = false;
     // Generate words from word bank
-    generatedWords = [];
-    for (let i = 0; i < testLength; i++) {
-        word = wordBank[Math.floor(Math.random() * wordBank.length)];
-        generatedWords.push(word);
-        wordField.children[i].textContent = word + ' ';
-    };
+    if (mode == "words") {
+        generatedWords = [];
+        for (let i = 0; i < testLength; i++) {
+            word = wordBank[Math.floor(Math.random() * wordBank.length)];
+            generatedWords.push(word);
+            wordField.children[i].textContent = word + ' ';
+        };
+    } else {
+        generatedWords = passage;
+        for (let i = 0; i < testLength; i++) {
+            wordField.children[i].textContent = generatedWords[i] + ' ';
+        }
+    }
 };
 
 function checkWord() {
@@ -1082,7 +1093,15 @@ function getResults() {
 };
 
 function setTestLength(n) {
-    testLength = n
+    if (n == "verse") {
+        passage = tempScripture.split(' ');
+        testLength = passage.length;
+        mode = "scripture";
+    } else {
+        passage = '';
+        testLength = n;
+        mode = "words";
+    }
     // Reset underlines
     for (let i = 0; i < header.children.length; i++) {
         header.children[i].className = "";
@@ -1104,6 +1123,7 @@ function setTestLength(n) {
     inputField.value = "";
     inputField.focus();
 };
+document.getElementById("verse").onclick = function() {setTestLength("verse")}
 document.getElementById("10words").onclick = function() {setTestLength(10)};
 document.getElementById("25words").onclick = function() {setTestLength(25)};
 document.getElementById("50words").onclick = function() {setTestLength(50)};
@@ -1116,42 +1136,45 @@ document.addEventListener('keydown', e => {
         checkWord();
         inputField.value = "";
         e.preventDefault();
-    };
-    if (e.code == 'Backspace') {
+    } else if (e.code == 'Backspace') {
         inputField.classList.remove("currentlyIncorrect")
-        extraKeys ++
+        extraKeys ++;
+    } else {
+        k = e.keyCode;
+        // If letter or punctuation typed
+        if ((k >= 65 && k <= 90) || (k >= 97 && k <= 122) || (k == 190)) {
+            if (!testStarted) {
+                testStart = Date.now();
+                testStarted = true;
+            };
+            // Changing colour of input field
+            if (inputField.value + e.key != generatedWords[currentWord].slice(0, inputField.value.length + 1) && !inputField.disabled) {
+                inputField.classList.add("currentlyIncorrect")
+            } else {
+                inputField.classList.remove("currentlyIncorrect")
+            }
+            // Complete test if last word has been typed, ie. don't need to press space at the end
+            if (inputField.value + e.key == generatedWords[currentWord] && currentWord == testLength - 1) {
+                inputField.value += e.key;
+                checkWord();
+            }
+        }
     }
-    // If uppercase or lowercase letter typed
-    k = e.keyCode
-    if ((k >= 65 && k <= 90) || (k >= 97 && k <= 122)) {
-        if (!testStarted) {
-            testStart = Date.now();
-            testStarted = true;
-        };
-        // Changing colour of input field
-        let cWord = generatedWords[currentWord]
-        if (inputField.value + e.key == cWord.slice(0, inputField.value.length + 1)) {
-            inputField.classList.remove("currentlyIncorrect")
-        } else if(!inputField.disabled) {
-            inputField.classList.add("currentlyIncorrect")
-        }
-        // Complete test if last word has been typed, ie. don't need to press space at the end
-        if (inputField.value + e.key == generatedWords[currentWord] && currentWord == testLength - 1) {
-            inputField.value += e.key;
-            checkWord();
-        }
-    };
 });
 
 document.getElementById("restart").addEventListener("click", function() {
-    setWordField();
+    if (mode == "scripture") {
+        setTestLength("verse")
+    } else {
+        setWordField();
+    }
     inputField.disabled = false;
     inputField.value = "";
     inputField.focus();
 });
 
 window.onload = function() {
-    setWordField();
+    setTestLength("verse");
 };
 
 // Settings window
