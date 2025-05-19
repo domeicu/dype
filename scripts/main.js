@@ -1014,7 +1014,6 @@ neck`.split('\n')
 
 let verseBank = `John 3:16 | For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life. |
 Romans 10:9 | If you declare with your mouth, 'Jesus is Lord,' and believe in your heart that God raised him from the dead, you will be saved. |
-Ephesians 2:8-9 | For it is by grace you have been saved, through faith—and this is not from yourselves, it is the gift of God—not by works, so that no one can boast. |
 Acts 4:12 | Salvation is found in no one else, for there is no other name under heaven given to mankind by which we must be saved. |
 Titus 3:5 | He saved us, not because of righteous things we had done, but because of his mercy. He saved us through the washing of rebirth and renewal by the Holy Spirit. |
 1 John 5:11-12 | And this is the testimony: God has given us eternal life, and this life is in his Son. Whoever has the Son has life; whoever does not have the Son of God does not have life. |
@@ -1028,7 +1027,6 @@ Luke 15:7 | I tell you that in the same way there will be more rejoicing in heav
 Proverbs 28:13 | Whoever conceals their sins does not prosper, but the one who confesses and renounces them finds mercy. |
 John 14:6 | Jesus answered, 'I am the way and the truth and the life. No one comes to the Father except through me.' |
 Colossians 1:15-17 | The Son is the image of the invisible God, the firstborn over all creation. For in him all things were created: things in heaven and on earth, visible and invisible, whether thrones or powers or rulers or authorities; all things have been created through him and for him. |
-Hebrews 4:15 | For we do not have a high priest who is unable to empathize with our weaknesses, but we have one who has been tempted in every way, just as we are—yet he did not sin. |
 Matthew 1:21 | She will give birth to a son, and you are to give him the name Jesus, because he will save his people from their sins. |
 Revelation 1:8 | I am the Alpha and the Omega, says the Lord God, who is, and who was, and who is to come, the Almighty. |
 Hebrews 11:1 | Now faith is confidence in what we hope for and assurance about what we do not see. |
@@ -1039,7 +1037,6 @@ Mark 11:24 | Therefore I tell you, whatever you ask for in prayer, believe that 
 Matthew 28:19-20 | Therefore go and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, and teaching them to obey everything I have commanded you. And surely I am with you always, to the very end of the age. |
 Romans 1:16 | For I am not ashamed of the gospel, because it is the power of God that brings salvation to everyone who believes: first to the Jew, then to the Gentile. |
 Isaiah 6:8 | Then I heard the voice of the Lord saying, 'Whom shall I send? And who will go for us?' And I said, 'Here am I. Send me!' |
-2 Timothy 4:2 | Preach the word; be prepared in season and out of season; correct, rebuke and encourage—with great patience and careful instruction. |
 1 Peter 3:15 | But in your hearts revere Christ as Lord. Always be prepared to give an answer to everyone who asks you to give the reason for the hope that you have. But do this with gentleness and respect. |
 Romans 5:8 | But God demonstrates his own love for us in this: While we were still sinners, Christ died for us. |
 Lamentations 3:22-23 | Because of the Lord’s great love we are not consumed, for his compassions never fail. They are new every morning; great is your faithfulness. |
@@ -1047,7 +1044,6 @@ Psalm 103:11-12 | For as high as the heavens are above the earth, so great is hi
 Micah 7:18-19 | Who is a God like you, who pardons sin and forgives the transgression of the remnant of his inheritance? You do not stay angry forever but delight to show mercy. You will again have compassion on us; you will tread our sins underfoot and hurl all our iniquities into the depths of the sea. |
 2 Corinthians 5:17 | Therefore, if anyone is in Christ, the new creation has come: The old has gone, the new is here! |
 Galatians 2:20 | I have been crucified with Christ and I no longer live, but Christ lives in me. The life I now live in the body, I live by faith in the Son of God, who loved me and gave himself for me. |
-Romans 12:1-2 | Therefore, I urge you, brothers and sisters, in view of God’s mercy, to offer your bodies as a living sacrifice, holy and pleasing to God—this is your true and proper worship. Do not conform to the pattern of this world, but be transformed by the renewing of your mind. |
 Ezekiel 36:26 | I will give you a new heart and put a new spirit in you; I will remove from you your heart of stone and give you a heart of flesh. |
 Philippians 4:13 | I can do all this through him who gives me strength. |
 Isaiah 40:31 | But those who hope in the Lord will renew their strength. They will soar on wings like eagles; they will run and not grow weary, they will walk and not be faint. |
@@ -1055,7 +1051,6 @@ Psalm 23:1-4 | The Lord is my shepherd, I lack nothing. He makes me lie down in 
 Romans 8:38-39 | For I am convinced that neither death nor life, neither angels nor demons, neither the present nor the future, nor any powers, neither height nor depth, nor anything else in all creation, will be able to separate us from the love of God that is in Christ Jesus our Lord. |
 Joshua 1:9 | Have I not commanded you? Be strong and courageous. Do not be afraid; do not be discouraged, for the Lord your God will be with you wherever you go. |
 Hebrews 10:23 | Let us hold unswervingly to the hope we profess, for he who promised is faithful. |
-Psalm 121:1-2 | I lift up my eyes to the mountains—where does my help come from? My help comes from the Lord, the Maker of heaven and earth. |
 John 11:25-26 | Jesus said to her, 'I am the resurrection and the life. The one who believes in me will live, even though they die; and whoever lives by believing in me will never die. Do you believe this?' |
 1 Thessalonians 5:16-18 | Rejoice always, pray continually, give thanks in all circumstances; for this is God’s will for you in Christ Jesus. |
 James 1:5 | If any of you lacks wisdom, you should ask God, who gives generously to all without finding fault, and it will be given to you. |
@@ -1070,9 +1065,7 @@ Psalm 51:5 | Surely I was sinful at birth, sinful from the time my mother concei
 Isaiah 53:5 | But he was pierced for our transgressions, he was crushed for our iniquities; the punishment that brought us peace was on him, and by his wounds we are healed. |
 Ephesians 2:1-3 | As for you, you were dead in your transgressions and sins, in which you used to live when you followed the ways of this world... Like the rest, we were by nature deserving of wrath. |
 Romans 7:18 | For I know that good itself does not dwell in me, that is, in my sinful nature. For I have the desire to do what is good, but I cannot carry it out. |
-Mark 7:21-23 | For it is from within, out of a person’s heart, that evil thoughts come—sexual immorality, theft, murder, adultery, greed, malice, deceit, lewdness, envy, slander, arrogance and folly. All these evils come from inside and defile a person. |
 James 4:17 | If anyone, then, knows the good they ought to do and doesn’t do it, it is sin for them. |
-1 Kings 8:46 | When they sin against you—for there is no one who does not sin—and you become angry with them and give them over to their enemies, who take them captive to their own lands, far away or near; |
 Romans 6:23 | For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord. |
 Genesis 6:5 | The Lord saw how great the wickedness of the human race had become on the earth, and that every inclination of the thoughts of the human heart was only evil all the time. |
 Psalm 14:2-3 | The Lord looks down from heaven on all mankind to see if there are any who understand, any who seek God. All have turned away, all have become corrupt; there is no one who does good, not even one. |
@@ -1103,10 +1096,7 @@ Psalm 67:2 | So that your ways may be known on earth, your salvation among all n
 Isaiah 49:6 | He says: 'It is too small a thing for you to be my servant to restore the tribes of Jacob... I will also make you a light for the Gentiles, that my salvation may reach to the ends of the earth.' |
 Acts 13:47 | For this is what the Lord has commanded us: 'I have made you a light for the Gentiles, that you may bring salvation to the ends of the earth.' |
 2 Corinthians 4:5 | For what we preach is not ourselves, but Jesus Christ as Lord, and ourselves as your servants for Jesus’ sake. |
-1 Thessalonians 1:8 | The Lord’s message rang out from you not only in Macedonia and Achaia—your faith in God has become known everywhere. |
 Luke 14:23 | Then the master told his servant, 'Go out to the roads and country lanes and compel them to come in, so that my house will be full.'`.split('|')
-
-let tempScripture = "Let us hold unswervingly to this hope we profess, for he who promised is faithful."
 
 let generatedWords = []
 
@@ -1236,7 +1226,7 @@ document.addEventListener('keydown', e => {
     } else {
         k = e.keyCode;
         // If letter or punctuation typed
-        if ((k >= 65 && k <= 90) || (k >= 97 && k <= 122) || (k == 190)) {
+        if ((k >= 65 && k <= 90) || (k >= 97 && k <= 122) || (k == 190) || (k == 49) || (k == 222)) {
             if (!testStarted) {
                 testStart = Date.now();
                 testStarted = true;
