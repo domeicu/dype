@@ -1177,14 +1177,19 @@ function getResults() {
 
 function setTestLength(n) {
     if (n == "verse") {
-        passage = verseBank[(Math.floor(Math.random() * verseBank.length/2))*2+1].split(' ');
+    // Scripture mode
+        let passageIndex = (Math.floor(Math.random() * verseBank.length/2)) * 2
+        document.getElementById("source").textContent = "You just typed" + verseBank[passageIndex]
+        passage = verseBank[passageIndex + 1].split(' ');
         passage.shift();
         testLength = passage.length - 1;
         mode = "scripture";
+        document.getElementById("source").classList.remove("invisible")
     } else {
         passage = '';
         testLength = n;
         mode = "words";
+        document.getElementById("source").classList.add("invisible")
     }
     // Reset underlines
     for (let i = 0; i < header.children.length; i++) {
