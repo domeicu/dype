@@ -1144,25 +1144,26 @@ function checkWord() {
         equal = true
         while (i < generatedWords[currentWord].length && equal) {
             if (generatedWords[currentWord][i] == word[i]) {
-                correctKeys ++
+                correctKeys++;
             } else {
-                equal = false
+                equal = false;
             }
             i++
         }
         // Check if this isn't the last word
         if (currentWord < testLength - 1) {
-            currentWord ++;
+            currentWord++;
             wordField.children[currentWord].classList.add("active");
         } else {
             getResults();
         }
-    };
-};
+    }
+}
 
 function getResults() {
+    console.log(generatedWords);
     chars = generatedWords.join(' ').length;
-    correctKeys += testLength - 1
+    correctKeys += testLength - 1;
     time = (Date.now() - testStart) / 1000 / 60;
     // Update text elements
     document.getElementById("wpm").textContent = Math.round((correctKeys/5)/time)
@@ -1170,19 +1171,19 @@ function getResults() {
     document.getElementById("acc").textContent = Math.round((correctKeys/(chars + extraKeys)) * 100) + "%"
     document.getElementById("time").textContent = Math.round(time * 60) + "s"
     // Other basic appearance things
-    results.classList.remove("invisible")
-    inputField.value = ""
+    results.classList.remove("invisible");
+    inputField.value = "";
     inputField.disabled = true;
-};
+}
 
 function setTestLength(n) {
     if (n == "verse") {
     // Scripture mode
         let passageIndex = (Math.floor(Math.random() * verseBank.length/2)) * 2
-        document.getElementById("source").textContent = "You just typed" + verseBank[passageIndex]
+        document.getElementById("source").textContent = "You just typed" + verseBank[passageIndex].slice(0, -1) + ".";
         passage = verseBank[passageIndex + 1].split(' ');
-        passage.shift();
-        testLength = passage.length - 1;
+        passage = passage.slice(1, -1);
+        testLength = passage.length;
         mode = "scripture";
         document.getElementById("source").classList.remove("invisible")
     } else {
@@ -1194,7 +1195,7 @@ function setTestLength(n) {
     // Reset underlines
     for (let i = 0; i < header.children.length; i++) {
         header.children[i].className = "";
-    };
+    }
     // Underline the correct number
     header.children[[10, 25, 50, 100].indexOf(n)+1].classList.add("activemode");
     // Remove all words
@@ -1206,12 +1207,12 @@ function setTestLength(n) {
         const word = document.createElement("span");
         word.textContent = "word ";
         wordField.appendChild(word);
-    };
+    }
     setWordField();
     inputField.disabled = false;
     inputField.value = "";
     inputField.focus();
-};
+}
 document.getElementById("verse").onclick = function() {setTestLength("verse")}
 document.getElementById("10words").onclick = function() {setTestLength(10)};
 document.getElementById("25words").onclick = function() {setTestLength(25)};
@@ -1229,9 +1230,8 @@ document.addEventListener('keydown', e => {
         inputField.classList.remove("currentlyIncorrect")
         extraKeys ++;
     } else {
-        k = e.keyCode;
-        // If letter or punctuation typed
-        if ((k >= 65 && k <= 90) || (k >= 97 && k <= 122) || (k == 190) || (k == 49) || (k == 222)) {
+        // If letter or punctuation typed (checking key.length = 1 seems to be the most elegant solution???)
+        if (e.key.length == 1) {
             if (!testStarted) {
                 testStart = Date.now();
                 testStarted = true;
@@ -1249,22 +1249,22 @@ document.addEventListener('keydown', e => {
             }
         }
     }
-});
+})
 
 document.getElementById("restart").addEventListener("click", function() {
     if (mode == "scripture") {
-        setTestLength("verse")
+        setTestLength("verse");
     } else {
         setWordField();
     }
     inputField.disabled = false;
     inputField.value = "";
     inputField.focus();
-});
+})
 
 window.onload = function() {
     setTestLength("verse");
-};
+}
 
 // Settings window
 document.getElementById("settings").onclick = function() {
