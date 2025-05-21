@@ -1012,7 +1012,7 @@ teeth
 shell
 neck`.split('\n')
 
-let verseBank = `John 3:16 | For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life. |
+let verseBank = ` John 3:16 | For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life. |
 Romans 10:9 | If you declare with your mouth, 'Jesus is Lord,' and believe in your heart that God raised him from the dead, you will be saved. |
 Acts 4:12 | Salvation is found in no one else, for there is no other name under heaven given to mankind by which we must be saved. |
 Titus 3:5 | He saved us, not because of righteous things we had done, but because of his mercy. He saved us through the washing of rebirth and renewal by the Holy Spirit. |
@@ -1096,7 +1096,7 @@ Psalm 67:2 | So that your ways may be known on earth, your salvation among all n
 Isaiah 49:6 | He says: 'It is too small a thing for you to be my servant to restore the tribes of Jacob... I will also make you a light for the Gentiles, that my salvation may reach to the ends of the earth.' |
 Acts 13:47 | For this is what the Lord has commanded us: 'I have made you a light for the Gentiles, that you may bring salvation to the ends of the earth.' |
 2 Corinthians 4:5 | For what we preach is not ourselves, but Jesus Christ as Lord, and ourselves as your servants for Jesus’ sake. |
-Luke 14:23 | Then the master told his servant, 'Go out to the roads and country lanes and compel them to come in, so that my house will be full.'`.split('|')
+Luke 14:23 | Then the master told his servant, 'Go out to the roads and country lanes and compel them to come in, so that my house will be full.' |`.split('|')
 
 let generatedWords = []
 
@@ -1150,6 +1150,7 @@ function checkWord() {
             }
             i++;
         }
+        // Check if extra characters were typed
         if (word.length > generatedWords[currentWord].length) {
             extraKeys += word.length - generatedWords[currentWord].length;
         }
