@@ -1143,12 +1143,15 @@ function checkWord() {
         let i = 0
         equal = true
         while (i < generatedWords[currentWord].length && equal) {
-            if (generatedWords[currentWord][i] == word[i]) {
+            if (word[i] == generatedWords[currentWord][i]) {
                 correctKeys++;
             } else {
                 equal = false;
             }
-            i++
+            i++;
+        }
+        if (word.length > generatedWords[currentWord].length) {
+            extraKeys += word.length - generatedWords[currentWord].length;
         }
         // Check if this isn't the last word
         if (currentWord < testLength - 1) {
@@ -1167,7 +1170,7 @@ function getResults() {
     time = (Date.now() - testStart) / 1000 / 60;
     // Update text elements
     document.getElementById("wpm").textContent = Math.round((correctKeys/5)/time)
-    document.getElementById("raw").textContent = Math.round((chars/5)/time)
+    document.getElementById("raw").textContent = Math.round(((chars + extraKeys)/5)/time)
     document.getElementById("acc").textContent = Math.round((correctKeys/(chars + extraKeys)) * 100) + "%"
     document.getElementById("time").textContent = Math.round(time * 60) + "s"
     // Other basic appearance things
@@ -1228,7 +1231,7 @@ document.addEventListener('keydown', e => {
         e.preventDefault();
     } else if (e.code == 'Backspace') {
         inputField.classList.remove("currentlyIncorrect")
-        extraKeys ++;
+        extraKeys++;
     } else {
         // If letter or punctuation typed (checking key.length = 1 seems to be the most elegant solution???)
         if (e.key.length == 1) {
